@@ -15,34 +15,52 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
 
+    <link rel="stylesheet" href="./assets/css/auth.css">
 </head>
 <body>
-    <section>
-        <div>
-            <img src="./assets/img/logo.png" alt="">
+    <section class="auth-style">
+        <div class="auth-style__header">
+            <img src="./assets/img/logo.png" class="img-fluid" alt="">
+            <h1><i>Welcome to <span class="text-success">Calleta</span></i></h1>
         </div>
         <form action="" method="post">
-            <div class="mb-3">
-                <label for="firstName" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="First Name">
-            </div>
-            <div class="mb-3">
-                <label for="lastName" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+            <div class="row">
+                <div class="mb-3 col-6">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                </div>
+                <div class="mb-3 col-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                </div>
             </div>
             <div class="mb-3">
                 <label for="emailAddress" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password">
+            <div class="row">
+                <div class="mb-3 col-6">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="mb-3 col-6">
+                    <label for="passwordConfirm" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="passwordConfirm" placeholder="Confirm Password">
+                </div>
             </div>
             <div class="mb-3">
-                <label for="passwordConfrm" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="passwordConfrm" placeholder="Confirm Password">
+                <label for="phone" class="form-label d-block">Mobile Phone</label>
+                <input id="phone" class="form-control" name="phone" type="tel">
             </div>
         </form>
     </section>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+<script>
+var input = document.querySelector("#phone");
+window.intlTelInput(input, {
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+});
+</script>
 </html>
