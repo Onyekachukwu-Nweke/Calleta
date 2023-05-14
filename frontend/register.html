@@ -23,37 +23,43 @@
             <img src="./assets/img/logo.png" class="img-fluid" alt="">
             <h1><i>Welcome to <span class="text-success">Calleta</span></i></h1>
         </div>
-        <form action="" method="post" class="mb-3">
+        <form action="" method="post" class="mb-3" id="signup">
             <div class="row">
-                <div class="mb-3 col-6">
-                    <label for="firstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control shadow-sm" id="firstName" placeholder="First Name">
+                <div class="form-field mb-3 col-6">
+                    <label for="fname" class="form-label">First Name</label>
+                    <input type="text" class="form-control shadow-sm" id="fname" placeholder="First Name">
+                    <small></small>
                 </div>
-                <div class="mb-3 col-6">
-                    <label for="lastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control shadow-sm" id="lastName" placeholder="Last Name">
+                <div class="form-field mb-3 col-6">
+                    <label for="lname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control shadow-sm" id="lname" placeholder="Last Name">
+                    <small></small>
                 </div>
             </div>
-            <div class="mb-3">
+            <div class="form-field mb-3">
                 <label for="emailAddress" class="form-label">Email address</label>
                 <input type="email" class="form-control shadow-sm" id="emailAddress" placeholder="name@example.com">
+                <small></small>
             </div>
             <div class="row">
-                <div class="mb-3 col-6">
+                <div class="form-field mb-3 col-6">
                     <label for="password" class="form-label">Password</label>
                     <input type="password" class="form-control shadow-sm" id="password" placeholder="Password">
+                    <small></small>
                 </div>
-                <div class="mb-3 col-6">
+                <div class="form-field mb-3 col-6">
                     <label for="passwordConfirm" class="form-label">Confirm Password</label>
                     <input type="password" class="form-control shadow-sm" id="passwordConfirm" placeholder="Confirm Password">
+                    <small></small>
                 </div>
             </div>
-            <div class="mb-3">
+            <div class="form-field mb-3">
                 <label for="phone" class="form-label d-block">Mobile Phone</label>
                 <input id="phone" class="form-control shadow-sm" name="phone" type="tel">
+                <small></small>
             </div>
 
-            <div class="text-center">
+            <div class="form-field text-center">
                 <button class="btn btn-lg btn-success text-center align-self-center shadow p-" type="submit">Sign Up</button>
             </div>
         </form>
@@ -72,4 +78,5 @@ window.intlTelInput(input, {
     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
 });
 </script>
+<script src="./js/formValidation.js"></script>
 </html>
