@@ -3,12 +3,15 @@
 
 from models.basemodel import BaseModel, Base
 from os import getenv
-import sqlalchemy
+from datetime import datetime
 from sqlalchemy import Column, String, Text, Float, Integer
+from sqlalchemy import DateTime
 from sqlalchemy.orm import relationship
 
 
 class Order(BaseModel, Base):
     """Representation of a order"""
     __tablename__ = 'order'
-    quantity = Column(Integer, nullable=False)
+    total_price = Column(Float, nullable=False)
+    order_date = Column(DateTime, nullable=False,
+                        default=datetime.utcnow)
