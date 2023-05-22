@@ -18,8 +18,9 @@ class User(BaseModel, Base):
     first_name = Column(String(128), nullable=True)
     last_name = Column(String(128), nullable=True)
     phone = Column(String(128), nullable=False)
-    # places = relationship("Place", backref="user")
-    # reviews = relationship("Review", backref="user")
+    carts = relationship('Cart', backref='user', lazy=True)
+    orders = relationship('Order', backref='user', lazy=True)
+    payments = relationship('Payment', backref='user', lazy=True)
 
     def __init__(self, *args, **kwargs):
         """initializes user"""

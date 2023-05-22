@@ -2,9 +2,8 @@
 """ holds class payment"""
 
 from models.basemodel import BaseModel, Base
-from os import getenv
 from datetime import datetime
-from sqlalchemy import Column, String, Text, Float, Integer
+from sqlalchemy import Column, Float, Integer, ForeignKey
 from sqlalchemy import DateTime
 from sqlalchemy.orm import relationship
 
@@ -15,3 +14,7 @@ class Payment(BaseModel, Base):
     payment_date = Column(DateTime, nullable=False,
                              default=datetime.utcnow)
     amount = Column(Float, nullable=False)
+    user_id = Column(Integer, ForeignKey('user.id'),
+                     nullable=False)
+    order_id = Column(Integer, ForeignKey('order.id'),
+                      nullable=False)
