@@ -16,6 +16,25 @@ body {
     font-size: 18px;
 }
 
+a i {
+    size: 20px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: red;
+    /* color: white; */
+    font-size: 12px;
+}
+
 /* Trusted Company */
 .trst i {
     font-size: 127px;
@@ -166,6 +185,14 @@ footer {
     width: 88%;
 }
 
+.gplay {
+    width: 160px;
+}
+
+.apstore {
+    width: 160px;
+}
+
 @media screen and (max-width: 576px) {
     body {
         font-size: 15px;
@@ -189,5 +216,13 @@ footer {
 
     .sml {
         width: 85%;
+    }
+
+    .gplay {
+        width: 127px;
+    }
+    
+    .apstore {
+        width: 132px;
     }
 }
