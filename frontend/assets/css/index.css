@@ -135,3 +135,12 @@ body {
 .detail-box > span {
     font-size: 1.2rem;
 }
+
+/* Mobile App Section */
+.dnd {
+    font-weight: 500;
+    font-size: 2.5rem;
+    width: 354px;
+    text-align: left;
+    line-height: 1.2;
+}
