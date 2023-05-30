@@ -107,5 +107,9 @@ class DBStorage:
 
         return count
     
-    def get_user():
-        
+    def get_user(self, email, cls=User):
+         """returns a user with the specified email"""
+         if cls == User:
+            user = self.__session.query(cls).filter(cls.email == email)
+            return user
+         return None

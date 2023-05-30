@@ -27,4 +27,8 @@ def login():
     password = login_details.get("password")
 
     if email:
-        
+        user = storage.get(email, User)
+        if not user:
+            return make_response(jsonify("User does not exist"), 400)
+        if password != user.password:
+            return make_response(jsonify("Wrong password, Try Again"), 400)
