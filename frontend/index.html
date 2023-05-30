@@ -17,10 +17,8 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="./vendor/owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./vendor/owlcarousel/dist/assets/owl.theme.default.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/index.css" />
@@ -29,12 +27,12 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a href="#" class="navbar-brand me-auto p-md-3">
+          <a href="#" class="navbar-brand me-auto me-md-5 p-md-3">
             <img
               src="./assets/img/logo.png"
               alt=""
-              width="170"
-              height="80"
+              width="120"
+              height="60"
               class="d-inline-block"
             />
           </a>
@@ -50,7 +48,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <form class="d-flex w-75">
+            <form class="d-flex w-50">
               <input
                 class="form-control me-2"
                 type="search"
@@ -66,10 +64,10 @@
                 <i class="ri-search-line"></i>
               </button>
             </form>
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-md-5">
               <li class="nav-item dropdown p-1 p-md-3">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="ri-user-line"></i> Account
+                  <i class="ri-user-line nav-icon"></i> Account
                 </a>
                 <ul class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Sign In</a></li>
@@ -80,7 +78,7 @@
               </li>
               <li class="nav-item dropdown p-1 p-md-3">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="ri-question-line"></i> Help
+                  <i class="ri-question-line nav-icon"></i> Help
                 </a>
                 <ul class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Help Center</a></li>
@@ -89,9 +87,10 @@
                   <li><a class="dropdown-item" href="#">Live Chat</a></li>
                 </ul>
               </li>
-              <li class="nav-item p-1 p-md-3">
+              <li class="nav-item p-1 p-md-3 cart">
                 <a class="nav-link" href="#" role="button">
-                  <i class="ri-shopping-cart-2-line"></i>Cart
+                  <i class="ri-shopping-cart-2-line nav-icon"></i>Cart
+                  <span>0</span>
                 </a>
               </li>
             </ul>
@@ -242,66 +241,69 @@
             </button>
           </div>
 
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide slider-item">
-                <div class="slide-img">
-                  <img src="./assets/img/products/fzn6.jpg" alt="">
-                  <div class="detail-box">
-                    <h2>Lockets</h2>
-                    <span><b>&dollar;20</b></span>
+          <div class="owl-carousel mt-3">
+              <div class="card slider-item">
+                <img src="./assets/img/products/fzn6.jpg" class="card-img-top product-img" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Blue Bunny Ice Cream</h5>
+                  <div class="d-flex">
+                    <p class="card-text">NGN 15.00</p>
+                    <span class="ms-auto">x1</span>
                   </div>
+                  <button class="add-cart btn btn-success ms-5">Add to Cart</button>
                 </div>
               </div>
 
-              <div class="swiper-slide slider-item">
-                <div class="slide-img">
-                  <img src="./assets/img/products/msf6.jpg" alt="">
-                  <div class="detail-box">
-                    <h2>Lockets</h2>
-                    <span><b>&dollar;20</b></span>
-                    <button>Add to cart</button>
+              <div class="card slider-item">
+                <img src="./assets/img/products/msf6.jpg" class="card-img-top product-img" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Mangala</h5>
+                  <div class="d-flex">
+                    <p class="card-text">NGN 300.00</p>
+                    <span class="ms-auto">x1</span>
                   </div>
+                  <button class="add-cart btn btn-success ms-5">Add to Cart</button>
                 </div>
               </div>
 
-              <div class="swiper-slide slider-item">
-                <div class="slide-img">
-                  <img src="./assets/img/products/veg6.jpg" alt="">
-                  <div class="detail-box">
-                    <h2>Lockets</h2>
-                    <span><b>&dollar;20</b></span>
+              <div class="card slider-item">
+                <img src="./assets/img/products/veg6.jpg" class="card-img-top product-img" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Onions</h5>
+                  <div class="d-flex">
+                    <p class="card-text">NGN 50.00</p>
+                    <span class="ms-auto">x1</span>
                   </div>
+                  <button class="add-cart btn btn-success ms-5">Add to Cart</button>
                 </div>
               </div>
 
-              <div class="swiper-slide slider-item">
-                <div class="slide-img">
-                  <img src="./assets/img/products/fzn2.jpg" alt="">
-                  <div class="detail-box">
-                    <h2>Lockets</h2>
-                    <span><b>&dollar;20</b></span>
+              <div class="card slider-item">
+                <img src="./assets/img/products/fzn2.jpg" class="card-img-top product-img" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Spring Rolls Beef</h5>
+                  <div class="d-flex">
+                    <p class="card-text">NGN 850.00</p>
+                    <span class="ms-auto">x1</span>
                   </div>
+                  <button class="add-cart btn btn-success ms-5">Add to Cart</button>
                 </div>
               </div>
 
-              <div class="swiper-slide slider-item">
-                <div class="slide-img">
-                  <img src="./assets/img/products/msf3.jpg" alt="">
-                  <div class="detail-box">
-                    <h2>Lockets</h2>
-                    <span><b>&dollar;20</b></span>
+              <div class="card slider-item">
+                <img src="./assets/img/products/msf3.jpg" class="card-img-top product-img" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Chicken Full</h5>
+                  <div class="d-flex">
+                    <p class="card-text">NGN 4000.00</p>
+                    <span class="ms-auto">x1</span>
                   </div>
+                  <button class="add-cart btn btn-success ms-5">Add to Cart</button>
                 </div>
               </div>
+
             </div>
 
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
@@ -340,5 +342,8 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="./js/swiper.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="./vendor/owlcarousel/dist/owl.carousel.min.js"></script>
   </body>
 </html>

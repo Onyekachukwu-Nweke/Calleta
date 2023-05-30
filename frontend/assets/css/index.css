@@ -16,8 +16,12 @@ body {
     font-size: 18px;
 }
 
-a i {
-    size: 20px;
+a > i {
+    font-size: 26px;
+}
+
+.cart {
+    position: relative;
 }
 
 .cart-count {
@@ -64,62 +68,20 @@ a i {
     width: 75%;
 }
 
-/** Swiper JS Begins **/
-.swiper {
-    height: 350px;
-    width: 100%;
-}
-/** Swiper Ends **/
 
-
-/* * New Arrival Section *
-.new-arrival-carousel{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-left: 2.5rem;
-    margin-right: 2rem;
-    margin-bottom: 3rem;
-    overflow: hidden;
-} */
+/* * New Arrival Section */
 
 .slider-item{
-    height: 280px !important;
-    width: 250px !important;
+    width: 250px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 5px;
 }
 
-.slide-img{
-    height: 300px;
-    position:relative;    
-}
-
-.slide-img > img{
+.product-img {
     height: 200px;
-    width: 200px;
-    border-radius: 5px 5px 0 0;
-    object-fit: cover;
-    object-position: center;
-}
-
-.product-overlay{
-    visibility: hidden;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width:100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* width: 200px !important; */
 }
 
 .view-btn{
