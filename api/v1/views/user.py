@@ -17,6 +17,17 @@ def register():
     phone = content.get('phone')
     password = content.get('password')
 
+    #check if a user exists
+    user_exists = storage.get_user(email, User)
+    if user_exists:
+        return make_response(jsonify("User Exists"), 400)
+    if request.method == 'POST':
+        new_user = User(**content)
+        new_user.save()
+        response = jsonify(new_user.to_dict())
+        response.status_code = 201
+        return response
+
 @app_views.route('/login', method=['POST'], strict_slashes=False)
 def login():
     """Logs a user/shopper into the application"""
