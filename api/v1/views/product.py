@@ -23,4 +23,7 @@ def view_product(product_id):
     Retrieves a particular product from
     db using the product id
     """
-    
+    product = storage.get(Product, product_id)
+    if not product:
+        abort(404)
+    return make_response(jsonify(product.to_dict()), 200)
