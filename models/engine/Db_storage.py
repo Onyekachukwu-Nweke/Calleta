@@ -6,13 +6,20 @@ Contains the class DBStorage
 import models
 from models.basemodel import BaseModel, Base
 from models.user import User
+from models.cart import Cart
+from models.payment import Payment
+from models.order import Order
+from models.orderitem import OrderItem
+from models.product import Product
+from models.category import Category
 from os import getenv
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-# classes = {"Amenity": Amenity, "City": City,
-#            "Place": Place, "Review": Review, "State": State, "User": User}
+classes = {"User": User, "Cart": Cart,
+           "Category": Category, "OrderItem": OrderItem,
+           "Product": Product, "Payment": Payment, "Order": Order}
 
 
 class DBStorage:
@@ -99,3 +106,6 @@ class DBStorage:
             count = len(models.storage.all(cls).values())
 
         return count
+    
+    def get_user():
+        
