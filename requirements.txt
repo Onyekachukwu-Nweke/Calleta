@@ -4,3 +4,4 @@ flask_cors
 jsonschema==3.0.1
 pathlib2
 SQLAlchemy
+Flask-Migrate

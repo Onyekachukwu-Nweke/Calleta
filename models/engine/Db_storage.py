@@ -6,7 +6,7 @@ Contains the class DBStorage
 import models
 from models.basemodel import BaseModel, Base
 from models.user import User
-from models.cart import Cart
+# from models.cart import Cart
 from models.payment import Payment
 from models.order import Order
 from models.orderitem import OrderItem
@@ -17,8 +17,7 @@ import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-classes = {"User": User, "Cart": Cart,
-           "Category": Category, "OrderItem": OrderItem,
+classes = {"User": User, "Category": Category, "OrderItem": OrderItem,
            "Product": Product, "Payment": Payment, "Order": Order}
 
 
