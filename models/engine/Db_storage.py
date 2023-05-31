@@ -3,6 +3,7 @@
 Contains the class DBStorage
 """
 
+from dotenv import dotenv_values
 import models
 from models.basemodel import BaseModel, Base
 from models.user import User
@@ -19,6 +20,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 
 classes = {"User": User, "Category": Category, "OrderItem": OrderItem,
            "Product": Product, "Payment": Payment, "Order": Order}
+env_vars = dotenv_values('.env')
 
 
 class DBStorage:
@@ -28,11 +30,11 @@ class DBStorage:
 
     def __init__(self):
         """Instantiate a DBStorage object"""
-        CALE_DB_USER = getenv('CALE_DB_USER')
-        CALE_DB_PWD = getenv('CALE_DB_PWD')
-        CALE_DB_HOST = getenv('CALE_DB_HOST')
-        CALE_DB_NAME = getenv('CALE_DB_NAME')
-        CALE_ENV = getenv('CALE_ENV')
+        CALE_DB_USER = env_vars['CALE_DB_USER']
+        CALE_DB_PWD = env_vars['CALE_DB_PWD']
+        CALE_DB_HOST = env_vars['CALE_DB_HOST']
+        CALE_DB_NAME = env_vars['CALE_DB_NAME']
+        CALE_ENV = env_vars['CALE_ENV']
         self.__engine = create_engine('mysql+mysqldb://{}:{}@{}/{}'.
                                       format(CALE_DB_USER,
                                              CALE_DB_PWD,
