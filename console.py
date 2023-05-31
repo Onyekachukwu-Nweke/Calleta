@@ -4,7 +4,7 @@ import cmd
 import sys
 # from dotenv import dotenv_values
 import models
-from models.basemodel import BaseModel, Base
+from models.basemodel import BaseModel
 from models.user import User
 # from models.cart import Cart
 from models.payment import Payment
@@ -12,14 +12,13 @@ from models.order import Order
 from models.orderitem import OrderItem
 from models.product import Product
 from models.category import Category
-from os import getenv
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
 classes = {"User": User, "Category": Category, "OrderItem": OrderItem,
            "Product": Product, "Payment": Payment, "Order": Order}
-env_vars = dotenv_values('.env')
+# env_vars = dotenv_values('.env')
 
 import shlex
 
